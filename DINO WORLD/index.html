@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DINO WORLD - Jelajahi Zaman Dinosaurus. Website edukasi interaktif tentang sejarah, jenis, habitat, dan mini game seru bertema prasejarah.">
+  <title>DINO WORLD - Jelajahi Zaman Dinosaurus</title>
+  
+  <!-- Google Fonts: Poppins & Fredoka untuk nuansa modern & petualangan -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet Utama -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR (Navigasi Utama Responsif)
+       ============================================================ -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#beranda" class="nav-logo">
+        <span class="logo-icon">
+          <!-- SVG Dino Footprint / Icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path d="M12 2C8.5 2 6 4.5 6 8c0 1.5.5 3 1.5 4L5 18c-.6 1.4.4 3 2 3h10c1.6 0 2.6-1.6 2-3l-2.5-6c1-1 1.5-2.5 1.5-4 0-3.5-2.5-6-6-6zm-3 7c-.8 0-1.5-.7-1.5-1.5S8.2 6 9 6s1.5.7 1.5 1.5S9.8 9 9 9zm6 0c-.8 0-1.5-.7-1.5-1.5S14.2 6 15 6s1.5.7 1.5 1.5S15.8 9 15 9zm-3 8c-1.7 0-3-1.3-3-3h6c0 1.7-1.3 3-3 3z"/>
+          </svg>
+        </span>
+        <span class="logo-text">DINO<span>WORLD</span></span>
+      </a>
+
+      <!-- Tombol Menu Hamburger untuk Mobile -->
+      <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Daftar Navigasi -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#beranda" class="nav-link active">Beranda</a></li>
+          <li class="nav-item"><a href="#sejarah" class="nav-link">Sejarah</a></li>
+          <li class="nav-item"><a href="#jenis-dino" class="nav-link">Jenis Dinosaurus</a></li>
+          <li class="nav-item"><a href="#mini-game" class="nav-link">Mini Game</a></li>
+          <li class="nav-item"><a href="#kuis" class="nav-link">Kuis</a></li>
+          <li class="nav-item"><a href="#pengunjung" class="nav-link">Buku Pengunjung</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn btn-sm btn-primary" id="btnAudioToggle" title="Nyalakan/Matikan Efek Suara">
+            <span class="icon-sound">🔊</span> Efek Suara
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       1. HALAMAN BERANDA (HERO SECTION)
+       ============================================================ -->
+  <section class="hero-section" id="beranda">
+    <div class="hero-backdrop">
+      <div class="volcano-silhouette"></div>
+      <div class="jungle-vines"></div>
+      <div class="ember-particles" id="emberParticles"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span> Era Mesozoikum • 252 - 66 Juta Tahun Lalu
+        </div>
+        <h1 class="hero-title">
+          DINO <span class="highlight-warm">WORLD</span>
+          <span class="hero-subtitle-block">Jelajahi Zaman Dinosaurus</span>
+        </h1>
+        <p class="hero-description">
+          Selamat datang di portal waktu prasejarah! Temukan keajaiban raksasa yang menguasai Bumi selama lebih dari 160 juta tahun. Pelajari sejarah zaman Trias, Jura, hingga Kapur, kenali berbagai predator legendaris, serta uji ketangkasanmu dalam mini game seru!
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-lg btn-accent" id="btnMulaiPetualangan">
+            <span class="btn-icon">🌋</span> Mulai Petualangan
+          </button>
+          <a href="#jenis-dino" class="btn btn-lg btn-outline">
+            <span class="btn-icon">🦖</span> Jelajahi Spesies
+          </a>
+          <button class="btn btn-lg btn-secondary" id="btnDialogInteraktifHero">
+            <span class="btn-icon">💬</span> Sapa Penjelajah
+          </button>
+        </div>
+
+        <!-- Statistik Menarik Purba -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-number">230+</span>
+            <span class="stat-label">Juta Thn Lalu Muncul</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Zaman Utama</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">700+</span>
+            <span class="stat-label">Spesies Teridentifikasi</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">66</span>
+            <span class="stat-label">Juta Thn Asteroid K-Pg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Art / Illustration Showcase -->
+      <div class="hero-visual">
+        <div class="dino-showcase-frame">
+          <div class="dino-glow"></div>
+          
+          <!-- Ilustrasi SVG T-Rex Megah Berkualitas Tinggi -->
+          <svg class="hero-dino-svg" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="tRexSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4e8c3b"/>
+                <stop offset="50%" stop-color="#2d5e23"/>
+                <stop offset="100%" stop-color="#1b3c16"/>
+              </linearGradient>
+              <linearGradient id="tRexBelly" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#e5c158"/>
+                <stop offset="100%" stop-color="#ab8424"/>
+              </linearGradient>
+              <linearGradient id="volcanoGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#ff3b00"/>
+                <stop offset="100%" stop-color="#ffb703"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Gunung Berapi di Latar Belakang -->
+            <polygon points="60,380 160,200 260,380" fill="#3c2619" opacity="0.8"/>
+            <polygon points="140,200 160,170 180,200" fill="url(#volcanoGlow)"/>
+            <path d="M160,170 Q150,140 130,120 Q160,100 170,70 Q180,110 200,130 Q170,140 160,170" fill="#ff7b00" opacity="0.85"/>
+            
+            <!-- Siluet Pepohonan Purba Pakis -->
+            <path d="M20,380 Q30,280 60,260 Q40,300 20,380 Z" fill="#1b4d24"/>
+            <path d="M50,380 Q70,250 110,240 Q80,290 50,380 Z" fill="#246830"/>
+
+            <!-- Tanah & Bebatuan -->
+            <ellipse cx="250" cy="400" rx="220" ry="35" fill="#2a1d13"/>
+            <ellipse cx="250" cy="400" rx="190" ry="25" fill="#3e2a1b"/>
+
+            <!-- Badan T-Rex -->
+            <!-- Ekor -->
+            <path d="M120,290 Q60,260 20,180 Q80,220 160,270 Z" fill="url(#tRexSkin)"/>
+            <!-- Kaki Kiri Belakang -->
+            <path d="M190,280 Q180,340 160,390 L190,395 Q210,340 220,290 Z" fill="#1e3e17"/>
+            <!-- Tubuh Utama -->
+            <ellipse cx="240" cy="260" rx="95" ry="75" fill="url(#tRexSkin)" transform="rotate(-15 240 260)"/>
+            <!-- Perut Kuning -->
+            <path d="M210,280 Q250,320 290,280 Q260,240 210,280 Z" fill="url(#tRexBelly)"/>
+            <!-- Leher & Kepala -->
+            <path d="M280,230 Q330,190 350,130 Q410,140 440,160 Q420,210 330,250 Z" fill="url(#tRexSkin)"/>
+            <!-- Moncong Bawah (Rahang Terbuka Mengaum) -->
+            <path d="M360,220 Q410,240 440,215 Q400,200 360,210 Z" fill="url(#tRexSkin)"/>
+            <!-- Rongga Mulut & Lidah -->
+            <path d="M370,180 Q410,195 430,175 Q410,210 380,205 Z" fill="#b71c1c"/>
+            <path d="M380,200 Q400,205 415,195 Q395,190 380,200 Z" fill="#e53935"/>
+            <!-- Gigi Taring Tajam -->
+            <polygon points="380,180 385,192 390,180" fill="#ffffff"/>
+            <polygon points="395,182 400,195 405,182" fill="#ffffff"/>
+            <polygon points="410,183 415,197 420,183" fill="#ffffff"/>
+            <polygon points="425,185 430,195 435,185" fill="#ffffff"/>
+            <polygon points="385,210 390,200 395,210" fill="#ffffff"/>
+            <polygon points="400,212 405,202 410,212" fill="#ffffff"/>
+            <polygon points="415,212 420,204 425,212" fill="#ffffff"/>
+            <!-- Mata Kuning Berapi -->
+            <circle cx="365" cy="150" r="10" fill="#ffb703"/>
+            <circle cx="366" cy="150" r="4" fill="#000000"/>
+            <circle cx="368" cy="148" r="2" fill="#ffffff"/>
+            <!-- Tonjolan Alis Garang -->
+            <path d="M350,145 Q365,135 380,145" stroke="#1b3c16" stroke-width="4" fill="none"/>
+            <!-- Tangan Mungil Khas T-Rex -->
+            <path d="M290,260 Q320,280 325,295 L332,292 L325,285 L332,280" stroke="#2d5e23" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <!-- Kaki Kanan Depan (Paha Berotot & Cakar) -->
+            <ellipse cx="240" cy="310" rx="35" ry="45" fill="url(#tRexSkin)" transform="rotate(10 240 310)"/>
+            <path d="M245,340 L260,390 L230,400 L275,402 L285,395 L260,340 Z" fill="#2d5e23"/>
+            <!-- Cakar Kaki -->
+            <polygon points="230,400 220,405 235,405" fill="#1b1b1b"/>
+            <polygon points="260,402 260,410 268,402" fill="#1b1b1b"/>
+            <polygon points="275,402 285,410 285,398" fill="#1b1b1b"/>
+            <!-- Tekstur Sisik & Belang Punggung -->
+            <path d="M210,215 Q230,225 250,210" stroke="#1b3c16" stroke-width="4" fill="none"/>
+            <path d="M170,235 Q190,250 210,230" stroke="#1b3c16" stroke-width="4" fill="none"/>
+            <path d="M140,255 Q160,270 180,250" stroke="#1b3c16" stroke-width="4" fill="none"/>
+          </svg>
+
+          <div class="dino-caption">
+            <span class="caption-title">Tyrannosaurus Rex (T-Rex)</span>
+            <span class="caption-desc">Raja Predator Periode Kapur Akhir</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. HALAMAN SEJARAH DINOSAURUS & TIMELINE
+       ============================================================ -->
+  <section class="section history-section" id="sejarah">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Era Mesozoikum</span>
+        <h2 class="section-title">Kronologi Sejarah Dinosaurus</h2>
+        <p class="section-subtitle">
+          Dinosaurus mendominasi daratan Bumi selama era Mesozoikum yang terbagi menjadi tiga babak besar: Zaman Trias, Zaman Jura, dan Zaman Kapur, sebelum kepunahan massal akibat asteroid dahsyat.
+        </p>
+      </div>
+
+      <!-- Ringkasan Muncul & Punah -->
+      <div class="history-highlight-grid">
+        <div class="highlight-box kemunculan-box">
+          <div class="highlight-icon">🌱</div>
+          <div class="highlight-text">
+            <h3>Awal Kemunculan (± 240 Juta Tahun Lalu)</h3>
+            <p>Dinosaurus pertama berevolusi pada pertengahan zaman Trias dari reptil archosaurus kecil yang lincah dan mampu berjalan dengan dua kaki (bipedal) di superbenua Pangea.</p>
+          </div>
+        </div>
+        <div class="highlight-box kepunahan-box">
+          <div class="highlight-icon">☄️</div>
+          <div class="highlight-text">
+            <h3>Kepunahan Massal K-Pg (± 66 Juta Tahun Lalu)</h3>
+            <p>Hantaman asteroid berdiameter ±10-15 km di Kawah Chicxulub (Meksiko) serta letusan supervulkan Deccan Traps menutup sinar matahari, memusnahkan 75% kehidupan termasuk dinosaurus non-unggas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Interaktif 3 Periode & Kepunahan -->
+      <div class="timeline-container">
+        <!-- Periode 1: Trias -->
+        <div class="timeline-item">
+          <div class="timeline-marker">1</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="period-badge badge-trias">252 - 201 Juta Tahun Lalu</span>
+              <h3 class="period-title">Zaman Trias (Awal Sang Raksasa)</h3>
+            </div>
+            <div class="timeline-body">
+              <p>Zaman di mana Bumi masih bersatu sebagai satu benua raksasa (Pangea) dengan iklim yang sangat kering dan panas. Vegetasi didominasi oleh pakis purba dan tumbuhan runjung konifer.</p>
+              <ul class="timeline-points">
+                <li><strong>Ciri Ekologis:</strong> Dinosaurus masih berukuran relatif kecil dan harus bersaing dengan reptil purba lainnya seperti rauisuchia dan therapsida.</li>
+                <li><strong>Contoh Dinosaurus:</strong> <em>Herrerasaurus</em>, <em>Eoraptor</em>, dan <em>Coelophysis</em>.</li>
+                <li><strong>Akhir Periode:</strong> Peristiwa kepunahan Trias-Jura membuka jalan evolusi besar bagi dinosaurus untuk mendominasi planet.</li>
+              </ul>
+            </div>
+            <div class="timeline-footer">
+              <span class="footer-tag">🌍 Iklim: Kering & Gersang</span>
+              <span class="footer-tag">🦕 Ukuran Dinosaurus: Kecil - Sedang</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Periode 2: Jura -->
+        <div class="timeline-item">
+          <div class="timeline-marker">2</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="period-badge badge-jura">201 - 145 Juta Tahun Lalu</span>
+              <h3 class="period-title">Zaman Jura (Zaman Keemasan Raksasa)</h3>
+            </div>
+            <div class="timeline-body">
+              <p>Benua Pangea mulai terbelah menjadi Laurasia dan Gondwana. Curah hujan meningkat drastis, melahirkan hutan hujan tropis lebat dan vegetasi melimpah yang memicu evolusi dinosaurus menjadi raksasa terbesar sepanjang masa.</p>
+              <ul class="timeline-points">
+                <li><strong>Ciri Ekologis:</strong> Sauropoda raksasa berleher panjang mendominasi daratan, sementara burung purba pertama (<em>Archaeopteryx</em>) mulai mengudara.</li>
+                <li><strong>Contoh Dinosaurus:</strong> <em>Brachiosaurus</em>, <em>Diplodocus</em>, <em>Stegosaurus</em>, dan predator puncak <em>Allosaurus</em>.</li>
+                <li><strong>Keunikan:</strong> Lautan dipenuhi reptil laut legendaris seperti Plesiosaurus dan Ichthyosaurus.</li>
+              </ul>
+            </div>
+            <div class="timeline-footer">
+              <span class="footer-tag">🌴 Iklim: Hangat, Lembap & Tropis</span>
+              <span class="footer-tag">🦕 Ukuran Dinosaurus: Sangat Masif (Raksasa)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Periode 3: Kapur -->
+        <div class="timeline-item">
+          <div class="timeline-marker">3</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="period-badge badge-kapur">145 - 66 Juta Tahun Lalu</span>
+              <h3 class="period-title">Zaman Kapur (Puncak Keanekaragaman)</h3>
+            </div>
+            <div class="timeline-body">
+              <p>Periode terpanjang era Mesozoikum. Benua-benua semakin menyerupai posisinya saat ini. Tumbuhan berbunga (angiospermae) dan serangga penyerbuk pertama kali muncul secara masif di muka bumi.</p>
+              <ul class="timeline-points">
+                <li><strong>Ciri Ekologis:</strong> Puncak adaptasi senjata pertahanan dan perburuan. Lahirlah karnivora paling mematikan dan dinosaurus bertanduk atau bertameng baja.</li>
+                <li><strong>Contoh Dinosaurus:</strong> <em>Tyrannosaurus Rex</em>, <em>Spinosaurus</em>, <em>Triceratops</em>, <em>Velociraptor</em>, dan <em>Ankylosaurus</em>.</li>
+                <li><strong>Inovasi Alami:</strong> Banyak dinosaurus terbukti memiliki bulu proto (proto-feathers) yang menjadi cikal bakal burung modern.</li>
+              </ul>
+            </div>
+            <div class="timeline-footer">
+              <span class="footer-tag">🌸 Iklim: Hangat dengan Variasi Musiman</span>
+              <span class="footer-tag">🦖 Karakter: Predator Ganas & Herbivora Bertanduk</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Peristiwa Kepunahan -->
+        <div class="timeline-item timeline-extinction">
+          <div class="timeline-marker marker-extinction">💥</div>
+          <div class="timeline-card card-extinction">
+            <div class="timeline-header">
+              <span class="period-badge badge-extinction">66 Juta Tahun Lalu</span>
+              <h3 class="period-title">Kiamat Prasejarah: Asteroid Chicxulub & Akhir Dinosaurus</h3>
+            </div>
+            <div class="timeline-body">
+              <p>Sebuah asteroid berkecepatan 70.000 km/jam menghujam perairan semenanjung Yucatan, Meksiko. Tabrakan melepaskan energi setara 10 miliar bom atom Hiroshima, memicu gempa megatsunami berketinggian ratusan meter, kebakaran hutan global, dan pelepasan sulfur ke stratosfer.</p>
+              <div class="extinction-factors">
+                <div class="factor-item">
+                  <span class="factor-icon">🌑</span>
+                  <strong>Musim Dingin Impak:</strong> Debu tebal menutupi matahari selama bertahun-tahun, menghentikan fotosintesis tumbuhan dan memicu kolaps rantai makanan.
+                </div>
+                <div class="factor-item">
+                  <span class="factor-icon">🌋</span>
+                  <strong>Aktivitas Vulkanik Ekstrem:</strong> Letusan Deccan Traps di India memuntahkan gas beracun yang memperparah keasaman lautan dan iklim.
+                </div>
+                <div class="factor-item">
+                  <span class="factor-icon">🦅</span>
+                  <strong>Keturunan yang Bertahan:</strong> Hanya dinosaurus berbulu kecil pemakan biji yang selamat dan berevolusi menjadi burung yang kita kenal saat ini!
+                </div>
+              </div>
+            </div>
+            <div class="timeline-footer">
+              <span class="footer-tag">📉 75% Spesies Punah</span>
+              <span class="footer-tag">🕊️ Burung Modern adalah Dinosaurus Avian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. HALAMAN JENIS DINOSAURUS (ENSIKLOPEDIA KARTU)
+       ============================================================ -->
+  <section class="section dino-section" id="jenis-dino">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ensiklopedia Fosil</span>
+        <h2 class="section-title">Galeri Jenis Dinosaurus</h2>
+        <p class="section-subtitle">
+          Telusuri profil lengkap dinosaurus terpopuler: dari predator apex yang menakutkan hingga herbivora berleher panjang yang anggun.
+        </p>
+      </div>
+
+      <!-- Kontrol Filter & Pencarian -->
+      <div class="dino-filter-bar">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Semua (6)</button>
+          <button class="filter-btn" data-filter="karnivora">🥩 Karnivora</button>
+          <button class="filter-btn" data-filter="herbivora">🌿 Herbivora</button>
+          <button class="filter-btn" data-filter="jura">Periode Jura</button>
+          <button class="filter-btn" data-filter="kapur">Periode Kapur</button>
+        </div>
+        <div class="filter-search">
+          <input type="text" id="dinoSearchInput" placeholder="Cari nama dinosaurus..." aria-label="Cari nama dinosaurus">
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+
+      <!-- Grid Kartu Dinosaurus -->
+      <div class="dino-cards-grid" id="dinoGrid">
+
+        <!-- KARTU 1: TYRANNOSAURUS REX -->
+        <article class="dino-card" data-category="karnivora" data-period="kapur" data-name="tyrannosaurus rex t-rex">
+          <div class="dino-card-media media-trex">
+            <span class="diet-badge diet-karnivora">🥩 Karnivora</span>
+            <span class="period-pill">Kapur Akhir</span>
+            
+            <!-- SVG Ilustrasi T-Rex -->
+            <svg class="card-svg" viewBox="0 0 200 160">
+              <circle cx="100" cy="80" r="70" fill="rgba(255,255,255,0.06)"/>
+              <path d="M40,110 Q80,120 110,80 Q150,60 170,40 Q180,70 150,90 Q120,110 90,130 Z" fill="#4caf50"/>
+              <ellipse cx="110" cy="85" rx="40" ry="30" fill="#388e3c"/>
+              <path d="M140,55 Q165,45 180,60 Q160,85 135,75 Z" fill="#2e7d32"/>
+              <circle cx="155" cy="55" r="4" fill="#ffd54f"/>
+              <polygon points="150,70 155,75 160,70" fill="#fff"/>
+              <polygon points="160,70 165,75 170,70" fill="#fff"/>
+              <path d="M90,110 L80,145 L100,145 Z" fill="#1b5e20"/>
+              <path d="M120,110 L130,145 L150,145 Z" fill="#2e7d32"/>
+            </svg>
+          </div>
+          <div class="dino-card-content">
+            <h3 class="dino-title">Tyrannosaurus Rex (T-Rex)</h3>
+            <span class="dino-latin">"Raja Kadal Tirani"</span>
+            
+            <div class="dino-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Makanan</span>
+                <span class="spec-value">Daging (Karnivora Apex)</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Habitat</span>
+                <span class="spec-value">Hutan Dataran Banjir Amerika Utara</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Ukuran</span>
+                <span class="spec-value">P: 12-13 m | T: 4 m</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Bobot</span>
+                <span class="spec-value">± 8 - 9 Ton</span>
+              </div>
+            </div>
+
+            <div class="dino-fact-box">
+              <span class="fact-tag">💡 Fakta Unik</span>
+              <p>Gigitan T-Rex memiliki kekuatan tekanan hingga 35.000–57.000 Newton, sanggup menghancurkan tulang mangsanya dalam sekali gigitan kuat!</p>
+            </div>
+
+            <div class="card-footer-action">
+              <button class="btn btn-sm btn-outline btn-roar" data-dino="trex">
+                🔊 Dengar Raungan
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTU 2: TRICERATOPS -->
+        <article class="dino-card" data-category="herbivora" data-period="kapur" data-name="triceratops">
+          <div class="dino-card-media media-triceratops">
+            <span class="diet-badge diet-herbivora">🌿 Herbivora</span>
+            <span class="period-pill">Kapur Akhir</span>
+            
+            <!-- SVG Ilustrasi Triceratops -->
+            <svg class="card-svg" viewBox="0 0 200 160">
+              <circle cx="100" cy="80" r="70" fill="rgba(255,255,255,0.06)"/>
+              <!-- Badan -->
+              <ellipse cx="90" cy="85" rx="55" ry="35" fill="#8d6e63"/>
+              <!-- Rumbai Kepala Frill -->
+              <path d="M120,40 Q150,45 155,75 Q135,100 115,85 Z" fill="#6d4c41"/>
+              <!-- Kepala -->
+              <circle cx="140" cy="80" r="22" fill="#795548"/>
+              <!-- 2 Tanduk Alis Besar -->
+              <line x1="135" y1="65" x2="165" y2="40" stroke="#fff8e1" stroke-width="5" stroke-linecap="round"/>
+              <!-- 1 Tanduk Hidung -->
+              <line x1="155" y1="85" x2="175" y2="80" stroke="#fff8e1" stroke-width="4" stroke-linecap="round"/>
+              <!-- Paruh & Mata -->
+              <circle cx="138" cy="73" r="3.5" fill="#212121"/>
+              <!-- Kaki Kokoh -->
+              <rect x="55" y="110" width="16" height="35" rx="6" fill="#5d4037"/>
+              <rect x="80" y="115" width="16" height="30" rx="6" fill="#4e342e"/>
+              <rect x="115" y="110" width="16" height="35" rx="6" fill="#5d4037"/>
+            </svg>
+          </div>
+          <div class="dino-card-content">
+            <h3 class="dino-title">Triceratops</h3>
+            <span class="dino-latin">"Wajah Bertanduk Tiga"</span>
+            
+            <div class="dino-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Makanan</span>
+                <span class="spec-value">Tumbuhan Semak & Palem (Herbivora)</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Habitat</span>
+                <span class="spec-value">Hutan Dataran Rendah Laramidia</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Ukuran</span>
+                <span class="spec-value">P: 8 - 9 m | T: 3 m</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Bobot</span>
+                <span class="spec-value">± 6 - 12 Ton</span>
+              </div>
+            </div>
+
+            <div class="dino-fact-box">
+              <span class="fact-tag">💡 Fakta Unik</span>
+              <p>Rumbai leher keras dari tulang tebal dan tiga tanduknya berfungsi ganda: sebagai pelindung pertahanan dari serangan T-Rex dan display menarik pasangan.</p>
+            </div>
+
+            <div class="card-footer-action">
+              <button class="btn btn-sm btn-outline btn-roar" data-dino="triceratops">
+                🔊 Dengar Raungan
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTU 3: VELOCIRAPTOR -->
+        <article class="dino-card" data-category="karnivora" data-period="kapur" data-name="velociraptor">
+          <div class="dino-card-media media-raptor">
+            <span class="diet-badge diet-karnivora">🥩 Karnivora</span>
+            <span class="period-pill">Kapur Akhir</span>
+            
+            <!-- SVG Ilustrasi Velociraptor -->
+            <svg class="card-svg" viewBox="0 0 200 160">
+              <circle cx="100" cy="80" r="70" fill="rgba(255,255,255,0.06)"/>
+              <!-- Ekor Kaku Penyeimbang -->
+              <path d="M20,95 Q60,90 90,85" stroke="#e65100" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <!-- Tubuh Lincah -->
+              <ellipse cx="105" cy="80" rx="30" ry="18" fill="#f57c00"/>
+              <!-- Leher S & Kepala Memanjang -->
+              <path d="M125,75 Q145,55 165,55 L175,65 L145,85 Z" fill="#ff9800"/>
+              <circle cx="155" cy="58" r="3" fill="#212121"/>
+              <!-- Bulu Sayap Prasejarah -->
+              <path d="M110,80 Q130,95 120,110" stroke="#ffa726" stroke-width="6" stroke-linecap="round"/>
+              <!-- Kaki Pelari & Cakar Sabit Raksasa -->
+              <path d="M95,95 L105,130 L125,135" stroke="#e65100" stroke-width="5" fill="none"/>
+              <!-- Cakar Sabit melengkung -->
+              <path d="M115,130 Q120,115 110,120" stroke="#fff" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <div class="dino-card-content">
+            <h3 class="dino-title">Velociraptor</h3>
+            <span class="dino-latin">"Pencuri yang Gesit"</span>
+            
+            <div class="dino-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Makanan</span>
+                <span class="spec-value">Reptil Kecil & Mamalia Prasejarah</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Habitat</span>
+                <span class="spec-value">Gurun Pasir & Savana Gurun Gobi (Asia)</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Ukuran</span>
+                <span class="spec-value">P: 2 m | T: 0.5 m (Panggul)</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Bobot</span>
+                <span class="spec-value">± 15 - 19 kg</span>
+              </div>
+            </div>
+
+            <div class="dino-fact-box">
+              <span class="fact-tag">💡 Fakta Unik</span>
+              <p>Fosil asli membuktikan Velociraptor memiliki bulu seperti burung dan cakar melengkung berbentuk sabit sepanjang 6,5 cm di jari kaki keduanya untuk mengunci mangsa.</p>
+            </div>
+
+            <div class="card-footer-action">
+              <button class="btn btn-sm btn-outline btn-roar" data-dino="raptor">
+                🔊 Dengar Suara
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTU 4: BRACHIOSAURUS -->
+        <article class="dino-card" data-category="herbivora" data-period="jura" data-name="brachiosaurus">
+          <div class="dino-card-media media-brachio">
+            <span class="diet-badge diet-herbivora">🌿 Herbivora</span>
+            <span class="period-pill">Jura Akhir</span>
+            
+            <!-- SVG Ilustrasi Brachiosaurus -->
+            <svg class="card-svg" viewBox="0 0 200 160">
+              <circle cx="100" cy="80" r="70" fill="rgba(255,255,255,0.06)"/>
+              <!-- Ekor Pendek -->
+              <path d="M30,105 Q60,100 80,95" stroke="#33691e" stroke-width="8" stroke-linecap="round"/>
+              <!-- Tubuh Besar -->
+              <ellipse cx="95" cy="95" rx="40" ry="28" fill="#558b2f"/>
+              <!-- Leher Raksasa Menjulang Tegak -->
+              <path d="M120,95 Q145,50 148,25 Q158,23 162,35 Q150,65 135,100 Z" fill="#689f38"/>
+              <!-- Kepala Kecil di Ketinggian -->
+              <ellipse cx="152" cy="24" rx="10" ry="7" fill="#7cb342"/>
+              <circle cx="155" cy="22" r="2" fill="#212121"/>
+              <!-- Kaki Depan Lebih Tinggi dari Kaki Belakang (Ciri Khas) -->
+              <rect x="75" y="115" width="14" height="32" rx="5" fill="#33691e"/>
+              <rect x="115" y="105" width="16" height="42" rx="5" fill="#33691e"/>
+            </svg>
+          </div>
+          <div class="dino-card-content">
+            <h3 class="dino-title">Brachiosaurus</h3>
+            <span class="dino-latin">"Kadal Berlengan"</span>
+            
+            <div class="dino-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Makanan</span>
+                <span class="spec-value">Pucuk Pohon Jarum & Konifer Tinggi</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Habitat</span>
+                <span class="spec-value">Hutan Hujan Subtropis Amerika Utara</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Ukuran</span>
+                <span class="spec-value">P: 22 - 26 m | T: 12 - 13 m</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Bobot</span>
+                <span class="spec-value">± 35 - 50 Ton</span>
+              </div>
+            </div>
+
+            <div class="dino-fact-box">
+              <span class="fact-tag">💡 Fakta Unik</span>
+              <p>Berbeda dengan sauropoda lain, kaki depannya jauh lebih panjang daripada kaki belakangnya, membuatnya mampu meraih dedaunan pohon setinggi gedung 4 lantai!</p>
+            </div>
+
+            <div class="card-footer-action">
+              <button class="btn btn-sm btn-outline btn-roar" data-dino="brachio">
+                🔊 Dengar Suara
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTU 5: STEGOSAURUS -->
+        <article class="dino-card" data-category="herbivora" data-period="jura" data-name="stegosaurus">
+          <div class="dino-card-media media-stego">
+            <span class="diet-badge diet-herbivora">🌿 Herbivora</span>
+            <span class="period-pill">Jura Akhir</span>
+            
+            <!-- SVG Ilustrasi Stegosaurus -->
+            <svg class="card-svg" viewBox="0 0 200 160">
+              <circle cx="100" cy="80" r="70" fill="rgba(255,255,255,0.06)"/>
+              <!-- Tubuh Bongsor -->
+              <ellipse cx="100" cy="95" rx="50" ry="28" fill="#00695c"/>
+              <!-- Lempeng Segi Lima Punggung (Plates) -->
+              <polygon points="65,70 75,50 85,70" fill="#ffb300"/>
+              <polygon points="85,68 100,42 110,68" fill="#ffa000"/>
+              <polygon points="110,68 125,46 135,70" fill="#ff8f00"/>
+              <polygon points="135,72 145,55 152,75" fill="#ffb300"/>
+              <!-- Kepala Sangat Kecil Dekat Tanah -->
+              <ellipse cx="160" cy="110" rx="14" ry="9" fill="#00796b"/>
+              <circle cx="165" cy="108" r="2" fill="#212121"/>
+              <!-- Ekor Berduri 4 Thagomizer -->
+              <path d="M55,95 Q35,100 20,90" stroke="#004d40" stroke-width="8" stroke-linecap="round"/>
+              <line x1="25" y1="90" x2="15" y2="75" stroke="#ffeb3b" stroke-width="3" stroke-linecap="round"/>
+              <line x1="28" y1="92" x2="12" y2="92" stroke="#ffeb3b" stroke-width="3" stroke-linecap="round"/>
+              <!-- Kaki Pendek Kokoh -->
+              <rect x="65" y="115" width="16" height="30" rx="5" fill="#004d40"/>
+              <rect x="120" y="115" width="16" height="30" rx="5" fill="#004d40"/>
+            </svg>
+          </div>
+          <div class="dino-card-content">
+            <h3 class="dino-title">Stegosaurus</h3>
+            <span class="dino-latin">"Kadal Beratap"</span>
+            
+            <div class="dino-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Makanan</span>
+                <span class="spec-value">Pakis Rendah & Lumut (Herbivora)</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Habitat</span>
+                <span class="spec-value">Hutan Dataran Terbuka Morrison Formation</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Ukuran</span>
+                <span class="spec-value">P: 9 m | T: 4 m</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Bobot</span>
+                <span class="spec-value">± 4 - 5 Ton</span>
+              </div>
+            </div>
+
+            <div class="dino-fact-box">
+              <span class="fact-tag">💡 Fakta Unik</span>
+              <p>Meskipun tubuhnya sebesar bus, otak Stegosaurus hanya seukuran buah kenari (± 80 gram). Ekor berdurinya (thagomizer) mampu menghempas musuh dengan fatal!</p>
+            </div>
+
+            <div class="card-footer-action">
+              <button class="btn btn-sm btn-outline btn-roar" data-dino="stego">
+                🔊 Dengar Suara
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- KARTU 6: SPINOSAURUS -->
+        <article class="dino-card" data-category="karnivora" data-period="kapur" data-name="spinosaurus">
+          <div class="dino-card-media media-spino">
+            <span class="diet-badge diet-karnivora">🥩 Karnivora (Piscivora)</span>
+            <span class="period-pill">Kapur Awal-Tengah</span>
+            
+            <!-- SVG Ilustrasi Spinosaurus -->
+            <svg class="card-svg" viewBox="0 0 200 160">
+              <circle cx="100" cy="80" r="70" fill="rgba(255,255,255,0.06)"/>
+              <!-- Layar Punggung Raksasa (Sail) -->
+              <path d="M70,80 Q100,20 130,75 Z" fill="#d84315"/>
+              <line x1="80" y1="75" x2="88" y2="45" stroke="#ffab91" stroke-width="2"/>
+              <line x1="100" y1="75" x2="100" y2="28" stroke="#ffab91" stroke-width="2"/>
+              <line x1="120" y1="75" x2="114" y2="45" stroke="#ffab91" stroke-width="2"/>
+              <!-- Tubuh Semi Akuatik -->
+              <ellipse cx="100" cy="85" rx="45" ry="25" fill="#bf360c"/>
+              <!-- Ekor Pipih Mirip Dayung -->
+              <path d="M35,95 Q65,95 75,85" stroke="#bf360c" stroke-width="12" stroke-linecap="round"/>
+              <!-- Moncong Panjang Buaya -->
+              <path d="M125,80 L175,75 L170,88 L125,92 Z" fill="#e64a19"/>
+              <circle cx="140" cy="78" r="3" fill="#ffe082"/>
+              <!-- Kaki Belakang Kokoh -->
+              <rect x="85" y="105" width="14" height="35" rx="5" fill="#870000"/>
+              <!-- Cakar Tangan Kuat Penusuk Ikan -->
+              <path d="M120,95 L130,120 L135,115" stroke="#ff5722" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="dino-card-content">
+            <h3 class="dino-title">Spinosaurus</h3>
+            <span class="dino-latin">"Kadal Berduri Tulang"</span>
+            
+            <div class="dino-specs-grid">
+              <div class="spec-cell">
+                <span class="spec-label">Makanan</span>
+                <span class="spec-value">Ikan Purba Raksasa (Onchopristis) & Daging</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Habitat</span>
+                <span class="spec-value">Sungai & Rawa Delta Afrika Utara</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Ukuran</span>
+                <span class="spec-value">P: 15 - 18 m | T: 5.5 m</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">Bobot</span>
+                <span class="spec-value">± 7 - 10 Ton</span>
+              </div>
+            </div>
+
+            <div class="dino-fact-box">
+              <span class="fact-tag">💡 Fakta Unik</span>
+              <p>Dinosaurus karnivora terpanjang yang pernah ada (lebih panjang dari T-Rex!). Memiliki layar dorsal setinggi 1,8 meter dan merupakan dinosaurus perenang ulung pertama di dunia.</p>
+            </div>
+
+            <div class="card-footer-action">
+              <button class="btn btn-sm btn-outline btn-roar" data-dino="spino">
+                🔊 Dengar Raungan
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. HALAMAN MINI GAME (3 PERMAINAN INTERAKTIF)
+       ============================================================ -->
+  <section class="section game-section" id="mini-game">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Arena Petualangan</span>
+        <h2 class="section-title">Zona Mini Game Dinosaurus</h2>
+        <p class="section-subtitle">
+          Buktikan ketangkasan dan refleks prasejarahmu dalam 3 mini game interaktif yang siap menguji pengetahuan dan kelincahanmu!
+        </p>
+      </div>
+
+      <!-- Tab Navigasi Mini Game -->
+      <div class="game-tabs-nav">
+        <button class="game-tab-btn active" data-tab="tab-tebak">
+          <span class="tab-icon">🎯</span> A. Tebak Nama Dinosaurus
+        </button>
+        <button class="game-tab-btn" data-tab="tab-telur">
+          <span class="tab-icon">🥚</span> B. Kumpulkan Telur Dino (Canvas)
+        </button>
+        <button class="game-tab-btn" data-tab="tab-kuis">
+          <span class="tab-icon">📝</span> C. Kuis Pengetahuan Dinosaurus
+        </button>
+      </div>
+
+      <!-- TAB 1: GAME TEBAK NAMA DINOSAURUS -->
+      <div class="game-tab-content active" id="tab-tebak">
+        <div class="game-panel">
+          <div class="panel-header">
+            <div class="panel-info">
+              <h3>🎯 Tebak Nama Dinosaurus</h3>
+              <p>Amati ilustrasi misterius di bawah ini dan tebak nama dinosaurus yang tepat. Menangkan skor tertinggi!</p>
+            </div>
+            <div class="game-score-badge">
+              <span>Skor Anda:</span>
+              <strong id="tebakScore">0</strong>
+            </div>
+          </div>
+
+          <div class="tebak-playground">
+            <!-- Box Gambar / Siluet Misterius -->
+            <div class="tebak-card-box">
+              <div class="tebak-screen" id="tebakScreen">
+                <!-- SVG / Visual dino berganti via JavaScript -->
+                <div id="tebakVisualContainer"></div>
+              </div>
+              <div class="tebak-hint" id="tebakHint">Petunjuk: Dinosaurus ini adalah ...</div>
+              <div class="tebak-audio-clue-wrapper" style="margin-top: 0.85rem;">
+                <button type="button" class="btn btn-sm btn-outline" id="btnTebakAudioHint">
+                  🔊 Putar Suara Misterius
+                </button>
+              </div>
+            </div>
+
+            <!-- Pilihan Jawaban 4 Tombol -->
+            <div class="tebak-options-grid" id="tebakOptionsGrid">
+              <!-- Tombol pilihan digenerate secara dinamis oleh script.js -->
+            </div>
+
+            <!-- Kontrol Aksi Game -->
+            <div class="tebak-actions">
+              <button class="btn btn-secondary" id="btnNextTebak">Lanjut / Soal Lain ⏩</button>
+              <button class="btn btn-outline" id="btnResetTebak">Ulangi Game 🔄</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: GAME KUMPULKAN TELUR DINOSAURUS (CANVAS HTML5) -->
+      <div class="game-tab-content" id="tab-telur">
+        <div class="game-panel">
+          <div class="panel-header">
+            <div class="panel-info">
+              <h3>🥚 Petualangan Kumpulkan Telur Dinosaurus</h3>
+              <p>Gerakkan karakter dinosaurus dengan keyboard (Panah Kiri/Kanan atau tombol A/D) untuk menangkap telur purba yang jatuh dari kanopi pohon purba. Hindari pecahan meteorit yang membara!</p>
+            </div>
+            <div class="canvas-stats-row">
+              <div class="stat-pill">⏱️ Waktu: <strong id="eggTimerDisplay">30s</strong></div>
+              <div class="stat-pill">⭐ Skor: <strong id="eggScoreDisplay">0</strong></div>
+              <div class="stat-pill">🏆 Tertinggi: <strong id="eggHighScoreDisplay">0</strong></div>
+            </div>
+          </div>
+
+          <div class="canvas-wrapper">
+            <!-- Canvas Layar Permainan 2D -->
+            <canvas id="dinoEggCanvas" width="700" height="420" tabindex="0"></canvas>
+            
+            <!-- Overlay Sebelum / Sesudah Game -->
+            <div class="canvas-overlay" id="canvasOverlay">
+              <div class="overlay-card">
+                <span class="overlay-emoji">🦖</span>
+                <h4 id="overlayTitle">Siap Menyelamatkan Telur Purba?</h4>
+                <p id="overlayDesc">Gunakan tombol keyboard <strong>← / →</strong> atau <strong>A / D</strong> untuk menggerakkan dino dan menangkap telur yang jatuh!</p>
+                <button class="btn btn-lg btn-accent" id="btnStartEggGame">Mulai Permainan 🎮</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kontrol Virtual untuk Pengguna Smartphone / Layar Sentuh -->
+          <div class="mobile-canvas-controls">
+            <button class="touch-btn" id="btnTouchLeft" aria-label="Geser Kiri">⬅️ Kiri</button>
+            <button class="touch-btn" id="btnTouchRight" aria-label="Geser Kanan">Kanan ➡️</button>
+          </div>
+
+          <div class="game-instructions-note">
+            <span>💡 <strong>Panduan Poin:</strong> Telur Hijau (+10 poin), Telur Emas Langka (+25 poin), Pecahan Batu Vulkanik (-15 poin). Waktu: 30 Detik!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: KUIS PENGETAHUAN DINOSAURUS (10 SOAL LENGKAP) -->
+      <div class="game-tab-content" id="tab-kuis">
+        <div class="game-panel kuis-panel" id="kuis">
+          <div class="panel-header">
+            <div class="panel-info">
+              <h3>📝 Kuis Pengetahuan Dinosaurus Prasejarah</h3>
+              <p>Jawab 10 pertanyaan pilihan ganda untuk menguji sejauh mana keahlian paleontologimu!</p>
+            </div>
+            <div class="kuis-progress-indicator">
+              <span>Progres Soal:</span>
+              <strong id="kuisProgressText">1 / 10</strong>
+            </div>
+          </div>
+
+          <!-- Wadah Soal Kuis Interaktif -->
+          <div class="kuis-body" id="kuisBody">
+            <div class="kuis-question-box">
+              <span class="question-number-pill" id="questionNumberBadge">Pertanyaan 1</span>
+              <h4 class="question-text" id="questionText">Pertanyaan akan dimuat di sini...</h4>
+            </div>
+
+            <!-- Pilihan Jawaban A, B, C, D -->
+            <div class="kuis-options-container" id="kuisOptionsContainer">
+              <!-- Render via JavaScript -->
+            </div>
+
+            <!-- Feedback & Navigasi -->
+            <div class="kuis-footer-nav">
+              <button class="btn btn-secondary" id="btnPrevKuis" style="display:none;">⬅️ Sebelumnya</button>
+              <button class="btn btn-accent" id="btnNextKuis" disabled>Pilih Jawaban Dulu</button>
+            </div>
+          </div>
+
+          <!-- Tampilan Hasil Akhir Kuis -->
+          <div class="kuis-result-box" id="kuisResultBox" style="display:none;">
+            <div class="result-badge-icon" id="resultIcon">🏆</div>
+            <h3 class="result-title" id="resultTitle">Luar Biasa!</h3>
+            <p class="result-summary">Kamu berhasil menyelesaikan kuis Dino World!</p>
+            
+            <div class="score-display-card">
+              <div class="score-circle">
+                <span class="final-score-val" id="finalScoreVal">100</span>
+                <span class="score-max">/ 100</span>
+              </div>
+              <div class="result-stats">
+                <p>Benar: <strong id="correctAnswersCount" class="text-success">10</strong> dari 10 Pertanyaan</p>
+                <p>Kategori Hasil Belajar: <strong id="resultCategoryName" class="text-accent">Master Paleontologi Legendaris</strong></p>
+              </div>
+            </div>
+
+            <p class="result-evaluation" id="resultEvaluationDesc">
+              Pengetahuanmu tentang dunia purba sungguh mengagumkan!
+            </p>
+
+            <div class="result-actions">
+              <button class="btn btn-primary" id="btnRetakeKuis">Ulangi Kuis 🔄</button>
+              <a href="#jenis-dino" class="btn btn-outline">Pelajari Materi Lagi 📖</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. HALAMAN FORM PENGUNJUNG & DIALOG JAVASCRIPT LENGKAP
+       ============================================================ -->
+  <section class="section visitor-section" id="pengunjung">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Buku Tamu Prasejarah</span>
+        <h2 class="section-title">Formulir Pendaftaran Penjelajah</h2>
+        <p class="section-subtitle">
+          Daftarkan dirimu sebagai penjelajah resmi Dino World! Nikmati dialog sambutan interaktif JavaScript (Prompt, Alert, Confirm) dan dapatkan Kartu Tanda Pengenal Purba eksklusif.
+        </p>
+      </div>
+
+      <!-- Bar Interaksi Dialog JavaScript Khusus (Prompt, Alert, Confirm) -->
+      <div class="interactive-dialog-card">
+        <div class="dialog-card-icon">🦕</div>
+        <div class="dialog-card-content">
+          <h3>Sapa Penjelajah Interaktif (Fitur Dialog JavaScript)</h3>
+          <p>Uji langsung fungsi <strong>JavaScript Prompt</strong> (input nama), <strong>Alert</strong> (sambutan hangat), dan <strong>Confirm</strong> (konfirmasi petualangan) sesuai standar instruksi tugas!</p>
+        </div>
+        <button class="btn btn-accent btn-pulse" id="btnTriggerDialog">
+          💬 Klik untuk Memulai Dialog Interaktif!
+        </button>
+      </div>
+
+      <div class="visitor-layout-grid">
+        <!-- Kolom Kiri: Form Input Pengunjung -->
+        <div class="form-container-card">
+          <div class="card-header-bar">
+            <h3>📝 Formulir Data Penjelajah</h3>
+            <span class="badge-required">* Wajib diisi</span>
+          </div>
+
+          <form id="visitorForm" novalidate>
+            <!-- Nama Pengunjung -->
+            <div class="form-group">
+              <label for="visitorName">Nama Lengkap Pengunjung <span class="required">*</span></label>
+              <input type="text" id="visitorName" class="form-control" placeholder="Contoh: Rian Anggara" required minlength="3">
+              <span class="error-feedback" id="errVisitorName">Nama wajib diisi minimal 3 karakter.</span>
+            </div>
+
+            <!-- Umur Pengunjung -->
+            <div class="form-group">
+              <label for="visitorAge">Umur (Tahun) <span class="required">*</span></label>
+              <input type="number" id="visitorAge" class="form-control" placeholder="Contoh: 19" min="5" max="100" required>
+              <span class="error-feedback" id="errVisitorAge">Masukkan umur yang valid (5 - 100 tahun).</span>
+            </div>
+
+            <!-- Institusi / Kota Asal -->
+            <div class="form-group">
+              <label for="visitorOrigin">Asal Kota / Kampus / Sekolah</label>
+              <input type="text" id="visitorOrigin" class="form-control" placeholder="Contoh: Teknik Informatika - Universitas X">
+            </div>
+
+            <!-- Pilihan Dinosaurus Favorit -->
+            <div class="form-group">
+              <label for="favoriteDino">Dinosaurus Favorit <span class="required">*</span></label>
+              <select id="favoriteDino" class="form-control" required>
+                <option value="">-- Pilih Dinosaurus Favoritmu --</option>
+                <option value="Tyrannosaurus Rex (T-Rex)">Tyrannosaurus Rex (T-Rex) - Sang Raja Ganas</option>
+                <option value="Triceratops">Triceratops - Si Wajah Bertanduk Tiga</option>
+                <option value="Velociraptor">Velociraptor - Pemburu Gesit Berbulu</option>
+                <option value="Brachiosaurus">Brachiosaurus - Raksasa Berleher Panjang</option>
+                <option value="Stegosaurus">Stegosaurus - Berlempeng Punggung Emas</option>
+                <option value="Spinosaurus">Spinosaurus - Predator Raksasa Perenang</option>
+              </select>
+              <span class="error-feedback" id="errFavoriteDino">Silakan pilih salah satu dinosaurus favorit.</span>
+            </div>
+
+            <!-- Pesan / Harapan Penjelajah -->
+            <div class="form-group">
+              <label for="visitorMessage">Catatan atau Pesan Petualangan</label>
+              <textarea id="visitorMessage" class="form-control" rows="3" placeholder="Apa yang paling ingin kamu ketahui tentang dinosaurus?"></textarea>
+            </div>
+
+            <!-- Checkbox Konfirmasi -->
+            <div class="form-group checkbox-group">
+              <label class="custom-checkbox">
+                <input type="checkbox" id="visitorAgreement" required>
+                <span class="checkmark"></span>
+                <span class="checkbox-label">Saya siap menjelajahi hutan purba dan mematuhi protokol konservasi fosil Dino World.</span>
+              </label>
+              <span class="error-feedback" id="errVisitorAgreement">Anda harus mencentang persetujuan ini.</span>
+            </div>
+
+            <!-- Tombol Submit & Reset -->
+            <div class="form-buttons">
+              <button type="submit" class="btn btn-primary" id="btnSubmitVisitor">
+                📋 Daftarkan & Buat Kartu Penjelajah
+              </button>
+              <button type="reset" class="btn btn-outline" id="btnResetForm">
+                Bersihkan Formulir
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Kolom Kanan: Hasil Tampilan Kartu Identitas Pengunjung di Website -->
+        <div class="preview-container-card">
+          <div class="card-header-bar">
+            <h3>🎫 Kartu Lisensi Penjelajah Prasejarah</h3>
+            <span class="badge-live">Live Preview</span>
+          </div>
+
+          <!-- Tampilan Kartu Pengenal Digital Prasejarah -->
+          <div class="explorer-license-card" id="licenseCardPreview">
+            <div class="license-header">
+              <div class="license-logo">
+                <span class="badge-icon">🦖</span>
+                <div>
+                  <strong>DINO WORLD PASSPORT</strong>
+                  <span class="license-id-code" id="licenseIdDisplay">ID: DW-2026-0001</span>
+                </div>
+              </div>
+              <div class="license-stamp">VERIFIED EXPLORER</div>
+            </div>
+
+            <div class="license-body">
+              <div class="license-avatar">
+                <div class="avatar-frame">
+                  <span class="avatar-icon" id="previewDinoAvatar">🦕</span>
+                </div>
+                <span class="explorer-role">Field Researcher</span>
+              </div>
+              <div class="license-details">
+                <div class="detail-row">
+                  <span class="d-label">Nama:</span>
+                  <strong class="d-val" id="previewName">Penjelajah Prasejarah</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="d-label">Umur:</span>
+                  <span class="d-val" id="previewAge">- Tahun</span>
+                </div>
+                <div class="detail-row">
+                  <span class="d-label">Asal:</span>
+                  <span class="d-val" id="previewOrigin">Ekspedisi Dino World</span>
+                </div>
+                <div class="detail-row">
+                  <span class="d-label">Dino Favorit:</span>
+                  <strong class="d-val text-accent" id="previewDinoFav">Tyrannosaurus Rex</strong>
+                </div>
+                <div class="detail-quote" id="previewQuote">
+                  "Siap menguak misteri zaman purba di Dino World!"
+                </div>
+              </div>
+            </div>
+
+            <div class="license-footer">
+              <span>📅 Tanggal: <span id="licenseDateDisplay">12/11/2026</span></span>
+              <span>Status: <strong class="text-success">Aktif & Resmi</strong></span>
+            </div>
+          </div>
+
+          <!-- Daftar Riwayat Penjelajah Terbaru (Tersimpan Lokal via JavaScript) -->
+          <div class="recent-explorers-card">
+            <h4>📋 Daftar Penjelajah Terdaftar Sesi Ini:</h4>
+            <div class="table-responsive">
+              <table class="table-explorers" id="explorersTable">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Dino Favorit</th>
+                    <th>Waktu Daftar</th>
+                  </tr>
+                </thead>
+                <tbody id="explorersTableBody">
+                  <!-- Data penjelajah otomatis dimasukkan melalui script.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. FOOTER INFORMASI LENGKAP WEBSITE
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col footer-brand">
+        <a href="#beranda" class="footer-logo">
+          <span class="logo-text">DINO<span>WORLD</span></span>
+        </a>
+        <p class="footer-description">
+          Portal edukasi sains dan paleontologi interaktif zaman purba. Didesain secara responsif, modern, dan informatif untuk mendukung pembelajaran sejarah alam semesta.
+        </p>
+        <div class="tech-stack-badges">
+          <span class="tech-pill">HTML5 Semantic</span>
+          <span class="tech-pill">CSS3 Flex & Grid</span>
+          <span class="tech-pill">Vanilla JavaScript ES6</span>
+          <span class="tech-pill">HTML5 Canvas API</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigasi Cepat</h4>
+        <ul class="footer-links">
+          <li><a href="#beranda">Beranda Utama</a></li>
+          <li><a href="#sejarah">Kronologi & Periode</a></li>
+          <li><a href="#jenis-dino">Ensiklopedia Spesies</a></li>
+          <li><a href="#mini-game">Arena Mini Game</a></li>
+          <li><a href="#kuis">Kuis Paleontologi</a></li>
+          <li><a href="#pengunjung">Buku Tamu Penjelajah</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Zaman Prasejarah</h4>
+        <ul class="footer-links">
+          <li><span>🌿 Periode Trias (252 - 201 Juta Thn)</span></li>
+          <li><span>🌴 Periode Jura (201 - 145 Juta Thn)</span></li>
+          <li><span>🌸 Periode Kapur (145 - 66 Juta Thn)</span></li>
+          <li><span>☄️ Kepunahan Massal K-Pg</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Informasi Tugas & Pengembang</h4>
+        <p class="footer-note">
+          Proyek Website Edukasi Interaktif Pemrograman Web / Teknik Informatika. Dibuat tanpa ketergantungan library eksternal (100% Native Pure JS).
+        </p>
+        <div class="footer-cta">
+          <button class="btn btn-sm btn-accent" id="btnBackToTop">
+            ⬆️ Kembali ke Atas
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>© 2026 DINO WORLD – Jelajahi Zaman Dinosaurus. Hak Cipta Dilindungi.</p>
+        <p class="footer-credit">Edukasi Paleontologi untuk Generasi Cerdas Indonesia 🇮🇩</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- File JavaScript Utama -->
+  <script src="script.js"></script>
+</body>
+</html>
